@@ -3,8 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tom Morrison — Composer</title>
-<meta name="description" content="Tom Morrison is a composer, electronic musician, and educator based in New Jersey.">
+<title>Tom Morrison | Composer, Electronic Musician &amp; Educator</title>
+<meta name="description" content="Tom Morrison is a composer and electronic musician whose work has been performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony. He teaches electronic music at Columbia University.">
+
+<!-- SEO — REPLACE-WITH-YOUR-DOMAIN below with your real domain once it's live, e.g. https://tom-morrison.com/ -->
+<link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN/">
+
+<!-- Open Graph (controls the preview card when this link is shared on Facebook, LinkedIn, iMessage, etc.) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tom Morrison | Composer, Electronic Musician & Educator">
+<meta property="og:description" content="Composer and electronic musician. Works performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony.">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/">
+<!-- Uncomment once you have a photo — 1200x630px works best -->
+<!-- <meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/photo.jpg"> -->
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tom Morrison | Composer, Electronic Musician & Educator">
+<meta name="twitter:description" content="Composer and electronic musician. Works performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony.">
+
+<!-- Structured data — helps Google understand who this page is about,
+     and can make your name eligible for a knowledge panel over time -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tom Morrison",
+  "jobTitle": ["Composer", "Electronic Musician", "Adjunct Assistant Professor of Music"],
+  "url": "https://REPLACE-WITH-YOUR-DOMAIN/",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Columbia University"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The Juilliard School" },
+    { "@type": "CollegeOrUniversity", "name": "Princeton University" }
+  ]
+}
+</script>
 
 <!--
   ============================================================
@@ -21,6 +57,11 @@
                              a block to add a new piece.
   3. Contact info         -> search for "CONTACT"
   4. Colors/fonts         -> the <style> block below, under ":root"
+  5. SEO tags             -> search for "SEO" near the top of <head>.
+                             Replace every "REPLACE-WITH-YOUR-DOMAIN"
+                             with your real domain (e.g. tom-morrison.com)
+                             once the site is live — do a find-and-replace
+                             for that exact text across the whole file.
 
   ADDING A SCORE (PDF):
   1. Put your PDF file in the same folder as this index.html
@@ -233,6 +274,15 @@
     filter: sepia(8%) saturate(85%);
   }
 
+  .under-construction {
+    color: var(--ink-soft);
+    font-style: italic;
+    padding: 8px 0 4px;
+  }
+  .under-construction a {
+    font-style: normal;
+  }
+
   .work-note {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11.5px;
@@ -325,11 +375,23 @@
     <h2>Scores &amp; Recordings</h2>
 
     <!--
-      WORKS LIST
-      Each <li class="work"> is one piece. Copy a whole block to add
-      another. See the instructions at the top of this file for how
-      to attach real PDFs and audio files.
+      WORKS LIST — TEMPORARILY DISABLED
+      The full catalog list (with per-piece Score/Listen links) is
+      commented out below, ready to switch back on whenever you have
+      time to add real files/links. To bring it back:
+      1. Delete the <p class="under-construction"> block just below
+      2. Delete the opening "<!--" right above "<ul class="works">"
+         and the closing "-->" right after "</ul>" further down
+      See the instructions at the top of this file for how to attach
+      real PDFs and audio files to each entry.
     -->
+    <p class="under-construction">
+      Audio and scores coming soon &mdash; this section of the site is
+      under construction. In the meantime, hear more of Tom&rsquo;s work
+      on <a href="https://soundcloud.com/tom-morrison" target="_blank" rel="noopener">SoundCloud</a>.
+    </p>
+
+    <!--
     <ul class="works">
 
       <li class="work">
@@ -341,8 +403,7 @@
             <a href="#" class="coming-soon">Score (coming soon)</a>
             <a href="#" class="coming-soon">Listen (coming soon)</a>
           </div>
-          <!-- To embed audio you host yourself, uncomment below and set src -->
-          <!-- <audio controls src="neon-and-oak.mp3"></audio> -->
+          [ To embed audio you host yourself, add: <audio controls src="neon-and-oak.mp3"></audio> ]
         </div>
       </li>
 
@@ -384,6 +445,7 @@
 
     </ul>
     <p class="work-note">To add a piece, copy one of the blocks above in the HTML and fill in the details.</p>
+    -->
   </div>
 </section>
 
