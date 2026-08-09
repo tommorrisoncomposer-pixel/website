@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom Morrison | Composer, Electronic Musician &amp; Educator</title>
+<meta name="description" content="Tom Morrison is a composer and electronic musician whose work has been performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony. He teaches electronic music at Columbia University.">
+
+<!-- SEO tags below -->
+<link rel="canonical" href="https://tom-morrison.com/">
+
+<!-- Open Graph (controls the preview card when this link is shared on Facebook, LinkedIn, iMessage, etc.) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tom Morrison | Composer, Electronic Musician & Educator">
+<meta property="og:description" content="Composer and electronic musician. Works performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony.">
+<meta property="og:url" content="https://tom-morrison.com/">
+<!-- Uncomment once you have a photo — 1200x630px works best -->
+<!-- <meta property="og:image" content="https://tom-morrison.com/photo.jpg"> -->
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tom Morrison | Composer, Electronic Musician & Educator">
+<meta name="twitter:description" content="Composer and electronic musician. Works performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony.">
+
+<!-- Structured data — helps Google understand who this page is about,
+     and can make your name eligible for a knowledge panel over time -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tom Morrison",
+  "jobTitle": ["Composer", "Electronic Musician", "Adjunct Assistant Professor of Music"],
+  "url": "https://tom-morrison.com/",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Columbia University"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The Juilliard School" },
+    { "@type": "CollegeOrUniversity", "name": "Princeton University" }
+  ]
+}
+</script>
+
+<!--
+  ============================================================
+  HOW TO EDIT THIS SITE — read me first
+  ============================================================
+  This is one plain HTML file. No build tools, no server needed.
+  Open it in any text editor (TextEdit, Notepad, VS Code, etc.),
+  make changes, save, and refresh your browser to see them.
+
+  WHERE THINGS ARE:
+  1. Bio text            -> search for "BIO TEXT"
+  2. Scores & Recordings  -> search for "CATEGORIES" — pieces are
+                             grouped into sections (e.g. "Instruments
+                             and Electronics"). Copy a whole
+                             <div class="category"> block to add a
+                             new section; copy a whole <li class="work">
+                             block to add a new piece within a section.
+  3. Contact info         -> search for "CONTACT"
+  4. Colors/fonts         -> the <style> block below, under ":root"
+  5. SEO tags             -> search for "SEO" near the top of <head>.
+                             Domain is already set to tom-morrison.com.
+
+  ADDING A SCORE (PDF):
+  1. Put your PDF file in the same folder as this index.html
+     (e.g. name it "neon-and-oak-score.pdf")
+  2. Find the work's <li class="work"> block
+  3. Change  href="#"  to  href="neon-and-oak-score.pdf"
+     on the "Score" link
+  4. Remove the "coming-soon" class and text if present
+
+  ADDING A RECORDING (audio file you own):
+  1. Put your mp3 file in the same folder (e.g. "drifter.mp3")
+  2. In the work's block, find the <audio> tag
+  3. Change  src="#"  to  src="drifter.mp3"
+
+  ADDING A RECORDING (Spotify / SoundCloud / YouTube link instead):
+  1. Find the work's <li class="work"> block
+  2. Change the "Listen" href="#" to your track's URL
+
+  HOSTING THIS FOR FREE:
+  GitHub Pages is the easiest free option — you upload this file
+  (and any PDFs/mp3s) to a GitHub repository and point your
+  Squarespace domain's DNS at it. Ask Claude to walk you through
+  the exact steps when you're ready.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #F5F3EC;
+    --paper-line: #E3E0D3;
+    --ink: #1E1F1A;
+    --ink-soft: #4A4B42;
+    --brass: #8B6F3E;
+    --pine: #37473C;
+    --pine-soft: #37473C1a;
+    --max-w: 720px;
+    --edge: clamp(24px, 6vw, 64px);
+  }
+
+  * { box-sizing: border-box; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--pine);
+    text-decoration-color: var(--pine-soft);
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+  }
+  a:hover { color: var(--brass); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+  }
+
+  /* ---------- staff-line signature ---------- */
+  .staff {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 220px;
+  }
+  .staff span {
+    display: block;
+    height: 1px;
+    background: var(--pine);
+    opacity: 0.55;
+  }
+  .staff.center { margin: 0 auto; }
+
+  /* ---------- header ---------- */
+  header {
+    padding: clamp(64px, 12vh, 120px) 0 40px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 22px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(48px, 9vw, 84px);
+    letter-spacing: 0.01em;
+    margin: 0 0 28px;
+    line-height: 1;
+  }
+
+  header .staff { margin: 0 auto 8px; }
+
+  /* ---------- sections ---------- */
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--paper-line); }
+
+  h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(28px, 4vw, 34px);
+    margin: 0 0 28px;
+  }
+
+  .bio p { margin: 0 0 20px; color: var(--ink-soft); }
+  .bio p:last-child { margin-bottom: 0; }
+  .bio a { font-style: italic; }
+
+  /* ---------- works / catalog list ---------- */
+  .category { margin-top: 44px; }
+  .category:first-of-type { margin-top: 36px; }
+
+  .category-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .works {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .work {
+    padding: 26px 0;
+  }
+  .work + .work { border-top: 1px dashed var(--paper-line); }
+
+  .work-no {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--brass);
+    padding-top: 4px;
+  }
+
+  .work-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0 0 4px;
+  }
+
+  .work-meta {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  .work-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .work-links a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--pine-soft);
+    padding-bottom: 2px;
+  }
+
+  .coming-soon {
+    color: var(--ink-soft);
+    opacity: 0.6;
+    font-style: normal;
+    border-bottom: none !important;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 320px;
+    height: 34px;
+    margin-top: 4px;
+    filter: sepia(8%) saturate(85%);
+  }
+
+  .under-construction {
+    color: var(--ink-soft);
+    font-style: italic;
+    padding: 8px 0 4px;
+  }
+  .under-construction a {
+    font-style: normal;
+  }
+
+  .work-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    opacity: 0.65;
+    margin-top: 10px;
+  }
+
+  /* ---------- contact / footer ---------- */
+  footer {
+    padding: 56px 0 80px;
+    text-align: center;
+  }
+
+  footer .staff { margin: 0 auto 28px; max-width: 140px; }
+
+  .contact-line {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+  .contact-line a { color: var(--ink); }
+
+  .copyright {
+    margin-top: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.5;
+  }
+
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Composer &middot; Electronic Musician &middot; Educator</p>
+    <h1>Tom Morrison</h1>
+    <div class="staff center" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="bio">
+  <div class="wrap">
+    <h2>Biography</h2>
+    <!-- BIO TEXT — edit the paragraph below directly -->
+    <p>
+      Tom Morrison (b. 1992) is a composer, electronic musician, and educator.
+      He has written for leading new music groups, including the Aizuri
+      Quartet, Alarm Will Sound, Latitude49, S&ouml;&nbsp;Percussion,
+      Contemporaneous, Yarn/Wire, Albany Symphony&rsquo;s new music chamber
+      orchestra, Dogs of Desire, and The New Jersey Symphony, among others.
+      Recent projects include new electroacoustic works for Theo Van Dyck and
+      Parker Ramsay and a contribution to Han Chen&rsquo;s &ldquo;Ligeti
+      Etudes meets 18 Composers&rdquo; commissioning project. His work has
+      been released on Eric Huckin&rsquo;s album, <em>Drifter</em>, and
+      Robert Fleitz&rsquo;s album, <em>Leaving a Room</em>.
+    </p>
+    <p>
+      Recently, he contributed the title track to Red Dog Ensemble&rsquo;s
+      debut album, <em>Neon and Oak</em> (Lexicon Classics), and was a
+      participant in the New Jersey Symphony&rsquo;s Cone Institute. More
+      recently, an evening-length set of his electroacoustic music was
+      featured on the opening night of the Sound Atlas festival in Calgary.
+      He won the 2016 Thailand International Composition Festival Competition
+      and first place in the 2021 Symphonia Caritas Competition for
+      first-generation college students.
+    </p>
+    <p>
+      He holds an MM from Juilliard and an MFA and Ph.D. from Princeton
+      University, where he was a postdoc and taught electronic music. He
+      formerly was a lecturer of music history at Montclair State University
+      and is now Adjunct Assistant Professor of Music at Columbia University,
+      where he teaches electronic music.
+    </p>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="wrap">
+    <h2>Scores &amp; Recordings</h2>
+
+    <p class="under-construction">
+      More audio and scores are being added regularly. In the meantime,
+      hear more of Tom&rsquo;s work on
+      <a href="https://soundcloud.com/tom-morrison" target="_blank" rel="noopener">SoundCloud</a>.
+    </p>
+
+    <!--
+      CATEGORIES
+      Each <div class="category"> is one section (e.g. "Instruments and
+      Electronics," "Chamber Music," "Orchestral"). To add a new
+      category, copy a WHOLE <div class="category">...</div> block,
+      change the <h3> title, and replace the pieces inside it.
+
+      Within a category, each <li class="work"> is one piece. Copy a
+      whole <li> block to add another piece to that category.
+
+      See the instructions at the top of this file for how to attach
+      real PDFs and audio files to a work-links block.
+    -->
+
+    <div class="category">
+      <h3 class="category-title">Instruments and Electronics</h3>
+      <ul class="works">
+
+        <li class="work">
+          <div>
+            <p class="work-title">Bridgesii</p>
+            <p class="work-meta">for violin and electronics</p>
+            <div class="work-links">
+              <a href="#" class="coming-soon">Score (coming soon)</a>
+              <a href="#" class="coming-soon">Listen (coming soon)</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Add your next category here by copying the <div class="category"> block above -->
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="staff" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <!--
+      CONTACT — replace the two spots below with your real email:
+      1. the href="mailto:..." value
+      2. the text between the <a> tags
+    -->
+    <p class="contact-line">
+      <a href="mailto:REPLACE-WITH-YOUR-EMAIL">[ your email here ]</a>
+    </p>
+    <p class="copyright">&copy; <span id="year"></span> Tom Morrison</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
