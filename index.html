@@ -6,7 +6,7 @@
 <title>Tom Morrison | Composer, Electronic Musician &amp; Educator</title>
 <meta name="description" content="Tom Morrison is a composer and electronic musician whose work has been performed by the Aizuri Quartet, Alarm Will Sound, Yarn/Wire, and the New Jersey Symphony. He teaches electronic music at Columbia University.">
 
-<!-- SEO — REPLACE-WITH-YOUR-DOMAIN below with your real domain once it's live, e.g. https://tom-morrison.com/ -->
+<!-- SEO tags below -->
 <link rel="canonical" href="https://tom-morrison.com/">
 
 <!-- Open Graph (controls the preview card when this link is shared on Facebook, LinkedIn, iMessage, etc.) -->
@@ -52,16 +52,16 @@
 
   WHERE THINGS ARE:
   1. Bio text            -> search for "BIO TEXT"
-  2. Scores & Recordings  -> search for "WORKS LIST" — each work is
-                             one <li class="work"> block. Copy/paste
-                             a block to add a new piece.
+  2. Scores & Recordings  -> search for "CATEGORIES" — pieces are
+                             grouped into sections (e.g. "Instruments
+                             and Electronics"). Copy a whole
+                             <div class="category"> block to add a
+                             new section; copy a whole <li class="work">
+                             block to add a new piece within a section.
   3. Contact info         -> search for "CONTACT"
   4. Colors/fonts         -> the <style> block below, under ":root"
   5. SEO tags             -> search for "SEO" near the top of <head>.
-                             Replace every "REPLACE-WITH-YOUR-DOMAIN"
-                             with your real domain (e.g. tom-morrison.com)
-                             once the site is live — do a find-and-replace
-                             for that exact text across the whole file.
+                             Domain is already set to tom-morrison.com.
 
   ADDING A SCORE (PDF):
   1. Put your PDF file in the same folder as this index.html
@@ -205,6 +205,20 @@
   .bio a { font-style: italic; }
 
   /* ---------- works / catalog list ---------- */
+  .category { margin-top: 44px; }
+  .category:first-of-type { margin-top: 36px; }
+
+  .category-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
   .works {
     list-style: none;
     margin: 0;
@@ -212,9 +226,6 @@
   }
 
   .work {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 4px 18px;
     padding: 26px 0;
   }
   .work + .work { border-top: 1px dashed var(--paper-line); }
@@ -317,8 +328,6 @@
 
   @media (max-width: 480px) {
     body { font-size: 17px; }
-    .work { grid-template-columns: 1fr; }
-    .work-no { padding-top: 0; }
   }
 </style>
 </head>
@@ -374,78 +383,46 @@
   <div class="wrap">
     <h2>Scores &amp; Recordings</h2>
 
-    <!--
-      WORKS LIST — TEMPORARILY DISABLED
-      The full catalog list (with per-piece Score/Listen links) is
-      commented out below, ready to switch back on whenever you have
-      time to add real files/links. To bring it back:
-      1. Delete the <p class="under-construction"> block just below
-      2. Delete the opening "<(ex mark)--" right above "<ul class="works">"
-         and the closing "closingthing" right after "</ul>" further down
-      See the instructions at the top of this file for how to attach
-      real PDFs and audio files to each entry.
-    -->
     <p class="under-construction">
-      Audio and scores coming soon &mdash; this section of the site is
-      under construction. In the meantime, hear more of Tom&rsquo;s work
-      on <a href="https://soundcloud.com/tom-morrison" target="_blank" rel="noopener">SoundCloud</a>.
+      More audio and scores are being added regularly. In the meantime,
+      hear more of Tom&rsquo;s work on
+      <a href="https://soundcloud.com/tom-morrison" target="_blank" rel="noopener">SoundCloud</a>.
     </p>
 
     <!--
-    <ul class="works">
+      CATEGORIES
+      Each <div class="category"> is one section (e.g. "Instruments and
+      Electronics," "Chamber Music," "Orchestral"). To add a new
+      category, copy a WHOLE <div class="category">...</div> block,
+      change the <h3> title, and replace the pieces inside it.
 
-      <li class="work">
-        <div class="work-no">No. 01</div>
-        <div>
-          <p class="work-title">Neon and Oak</p>
-          <p class="work-meta">Title track &middot; Red Dog Ensemble &middot; Lexicon Classics</p>
-          <div class="work-links">
-            <a href="#" class="coming-soon">Score (coming soon)</a>
-            <a href="#" class="coming-soon">Listen (coming soon)</a>
-          </div>
-          [ To embed audio you host yourself, add: <audio controls src="neon-and-oak.mp3"></audio> ]
-        </div>
-      </li>
+      Within a category, each <li class="work"> is one piece. Copy a
+      whole <li> block to add another piece to that category.
 
-      <li class="work">
-        <div class="work-no">No. 02</div>
-        <div>
-          <p class="work-title">Drifter</p>
-          <p class="work-meta">Contribution &middot; Eric Huckin</p>
-          <div class="work-links">
-            <a href="#" class="coming-soon">Score (coming soon)</a>
-            <a href="#" class="coming-soon">Listen (coming soon)</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="work">
-        <div class="work-no">No. 03</div>
-        <div>
-          <p class="work-title">Leaving a Room</p>
-          <p class="work-meta">Contribution &middot; Robert Fleitz</p>
-          <div class="work-links">
-            <a href="#" class="coming-soon">Score (coming soon)</a>
-            <a href="#" class="coming-soon">Listen (coming soon)</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="work">
-        <div class="work-no">No. 04</div>
-        <div>
-          <p class="work-title">New work</p>
-          <p class="work-meta">Add ensemble, year, or description here</p>
-          <div class="work-links">
-            <a href="#" class="coming-soon">Score (coming soon)</a>
-            <a href="#" class="coming-soon">Listen (coming soon)</a>
-          </div>
-        </div>
-      </li>
-
-    </ul>
-    <p class="work-note">To add a piece, copy one of the blocks above in the HTML and fill in the details.</p>
+      See the instructions at the top of this file for how to attach
+      real PDFs and audio files to a work-links block.
     -->
+
+    <div class="category">
+      <h3 class="category-title">Instruments and Electronics</h3>
+      <ul class="works">
+
+        <li class="work">
+          <div>
+            <p class="work-title">Bridgesii</p>
+            <p class="work-meta">for violin and electronics</p>
+            <div class="work-links">
+              <a href="#" class="coming-soon">Score (coming soon)</a>
+              <a href="#" class="coming-soon">Listen (coming soon)</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Add your next category here by copying the <div class="category"> block above -->
+
   </div>
 </section>
 
@@ -460,7 +437,7 @@
       2. the text between the <a> tags
     -->
     <p class="contact-line">
-      <a href="mailto:tommorrisoncomposer@gmail.com">[ get in touch ]</a>
+      <a href="mailto:REPLACE-WITH-YOUR-EMAIL">[ your email here ]</a>
     </p>
     <p class="copyright">&copy; <span id="year"></span> Tom Morrison</p>
   </div>
